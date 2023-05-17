@@ -6,21 +6,16 @@ function verificarTurno() {
     var turno = document.getElementById("turno").value;
     turno = turno.toUpperCase();
   
-    var mensagem = "";
+   
     if (turno === "M") {
-      window.alert(mensagem = "Bom dia!");
+      window.alert("Bom dia!");
     } else if (turno === "V") {
-        window.alert(mensagem = "Boa tarde!");
+        window.alert("Boa tarde!");
     } else if (turno === "N") {  
-        window.alert(mensagem = "Boa noite!");
+        window.alert("Boa noite!");
     } else {
-        window.alert(mensagem = "Valor inválido!");
+        window.alert("Valor inválido!");
     }
-     window.alert(mensagem);
+   
   
   }
-  Treinamento javascript
- Treinamento Css
- Treinamento Html
-  
-Treinamentob

@@ -2,16 +2,24 @@
 
 
 function mostrarOrdemDecrescente() {
-    var numeros = [];
-      for (var i = 1; i <= 3; i++) {
-        var numero = parseInt(document.getElementById("numero" + i).value);
-        numeros.push(numero);
-      }
-      numeros.sort(function(a, b) {
-        return b - a;
-      });
-      var numerosOrdenados = numeros.join(", ");
-     
-      window.alert(numerosOrdenados);
-    }
-    
+
+  var numero1 = parseInt(document.getElementById("numero1").value);
+  var numero2 = parseInt(document.getElementById("numero2").value);
+  var numero3 = parseInt(document.getElementById("numero3").value)
+  
+  var numerosOrdenados = ordernarDecrescente(numero1, numero2, numero3);
+
+  console.log(numerosOrdenados);
+  window.alert(numerosOrdenados);
+}
+
+function ordernarDecrescente(numero1, numero2, numero3) {
+  
+  var numeros = [numero1, numero2, numero3];
+
+  numeros.sort(function (a, b) {
+    return b - a;
+  });
+
+  return numeros.join(", ");
+}
