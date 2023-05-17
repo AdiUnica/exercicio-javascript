@@ -19,5 +19,6 @@ function verificarTurno() {
      window.alert(mensagem);
   
   }
- Treinamento
+ Treinamento javascript
+ Treinamento Css
   
