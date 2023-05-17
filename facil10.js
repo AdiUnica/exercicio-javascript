@@ -19,4 +19,5 @@ function verificarTurno() {
      window.alert(mensagem);
   
   }
+ Treinamento
   
