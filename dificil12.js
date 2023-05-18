@@ -44,8 +44,8 @@ function calcularFolhaPagamento() {
     }
 
 
-    const totalDescontos = descontoImpostoDeRenda + descontoINSS + descontoSindicato;
-    const salarioLiquido = salarioBruto - totalDescontos
+    var totalDescontos = descontoImpostoDeRenda + descontoINSS + descontoSindicato;
+    var salarioLiquido = salarioBruto - totalDescontos
 
 
     window.alert("Salário bruto (" + valorHora + " * " + horasTrabalhadas + "): R$ " + salarioBruto.toFixed(2));
