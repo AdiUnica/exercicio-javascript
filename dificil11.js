@@ -17,40 +17,44 @@ d. O novo salário, após o aumento.  */
 
 function calcularReajusteDeSalario() {
 
-    var salario = parseFloat(document.getElementById("salario").value);
+    let salario = parseFloat(document.getElementById("salario").value);
+    let percentualAumento = calcularPercentualDeAumento(salario);
+    let novoSalario = calcularSalario(salario, percentualAumento);
+    let valorAumento = novoSalario - salario;
 
-    var percentualAumento;
+    mostrarCalculo(salario, percentualAumento, valorAumento, novoSalario);   
+
+}
+
+function mostrarCalculo(salario, percentualAumento, valorAumento, novoSalario) {
+    
+    let resultado = 
+    `
+    Seu salário antes do aumento era de: R$ ${salario.toFixed(2)}
+    Seu aumento foi de ${percentualAumento} %
+    O valor do seu aumento é de: R$ ${valorAumento.toFixed(2)}
+    O seu novo salário é: R$ ${novoSalario.toFixed(2)}
+    `
+    window.alert(resultado);
+}
+
+function calcularSalario(salario, percentualAumento) {
+    return salario + (salario * (percentualAumento / 100));
+}
+
+function calcularPercentualDeAumento(salario) {
+
+    let percentualAumento;
 
     if (salario <= 280) {
-
         percentualAumento = 20;
-
     } else if (salario <= 700) {
-
         percentualAumento = 15;
-
     } else if (salario <= 1500) {
-
         percentualAumento = 10;
     } else {
-
         percentualAumento = 5;
-
     }
 
-
-
-
-    var valorAumento = salario * (percentualAumento / 100);
-
-    var novoSalario = salario + valorAumento;
-
-    window.alert("Seu salário antes do aumento era de: R$" + salario.toFixed(2));
-
-    window.alert("Seu aumento foi de " + percentualAumento + "%");
-
-    window.alert("O valor do seu aumento é de: R$" + valorAumento.toFixed(2));
-
-    window.alert("O seu novo salário é: R$" + novoSalario.toFixed(2));
-
+    return percentualAumento;
 }
