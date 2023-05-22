@@ -22,14 +22,15 @@ function calcularReajusteDeSalario() {
     let novoSalario = calcularSalario(salario, percentualAumento);
     let valorAumento = novoSalario - salario;
 
-    mostrarCalculo(salario, percentualAumento, valorAumento, novoSalario);   
+    mostrarCalculo(salario, percentualAumento, valorAumento, novoSalario);
 
 }
 
 function mostrarCalculo(salario, percentualAumento, valorAumento, novoSalario) {
+
+    let resultado =
     
-    let resultado = 
-    `
+        `
     Seu salário antes do aumento era de: R$ ${salario.toFixed(2)}
     Seu aumento foi de ${percentualAumento} %
     O valor do seu aumento é de: R$ ${valorAumento.toFixed(2)}
