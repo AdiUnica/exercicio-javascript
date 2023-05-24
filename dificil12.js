@@ -43,6 +43,7 @@ const IR_FAIXA_D_DESCONTO = 0.2;
 function calcularFolhaPagamento() {
     let valorHora = parseFloat(document.getElementById("valorHora").value);
     let horasTrabalhadas = parseInt(document.getElementById("horasTrabalhadas").value);
+    
     let salarioBruto = calcularSalarioBruto(valorHora, horasTrabalhadas);
     let descontoINSS = calcularInss(salarioBruto);
     let descontoSindicato = calcularDescontoSindicato(salarioBruto);
