@@ -66,12 +66,12 @@ function calcularResultado(conceito) {
 
 function mostrarResultado(nota1, nota2, media, conceito, resultado) {
 
-    let resumoResutado =
+    let resumoResultado =
         `
     Notas: ${nota1}, ${nota2};
     A media é: ${media.toFixed(2)};
     O conceito é: ${conceito};
     Resultado: ${resultado};
     `
-    window.alert(resumoResutado);
+    window.alert(resumoResultado);
 }
