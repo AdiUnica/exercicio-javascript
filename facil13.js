@@ -3,7 +3,6 @@
 
 function mostrarDiaDaSemana() {
     var numero = parseFloat(document.getElementById("numero").value);
-    var resultado = document.getElementById("resultado");
 
 
     if (numero == "1") {
