@@ -2,12 +2,11 @@
 
 
 function calcularTabuada() {
-    var numero = parseInt(document.getElementById("numero").value);
+    let numero = parseInt(document.getElementById("numero").value);
 
-    let i = 1
-    while ( i < 11) {
+    for (let i = 1; i < 11; i++) {
         document.write(numero + " X " + i + " = " + (numero * i) +"<br>");
-        i++;
+        
     }
     
     let resultado = '';
@@ -17,3 +16,18 @@ function calcularTabuada() {
     }
     window.alert(resultado);
 }
+
+
+
+
+
+
+/* function calcularTabuada() {
+    var numero = parseInt(document.getElementById("numero").value);
+
+    let i = 1
+    while ( i < 11) {
+        document.write(numero + " X " + i + " = " + (numero * i) +"<br>");
+        i++;
+    }
+    */
