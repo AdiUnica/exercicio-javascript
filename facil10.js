@@ -16,6 +16,6 @@ function verificarTurno() {
     } else {
         window.alert("Valor inválido!");
     }
-   
+}
   
-  }
+  
