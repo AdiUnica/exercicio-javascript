@@ -15,7 +15,6 @@ function calcularfaixaEtariaDeIdade() {
     let faixa4 = 0;
     let faixa5 = 0;
 
-
     for (let i = 1; i <= 10; i++) {
         let idade = parseFloat(document.getElementById("idade" + i).value);
         if (idade <= 15) {
@@ -29,25 +28,25 @@ function calcularfaixaEtariaDeIdade() {
         } else {
             faixa5++;
         }
-
-        let percentualFaixa1 = calcularPercentual(faixa1);
-
-        let percentualFaixa5 = calcularPercentual(faixa5);
-
-        mostrarResultado(faixa1, faixa2, faixa3, faixa4, faixa5, percentualFaixa1, percentualFaixa5);
-
-
     }
+    
+    let percentualFaixa1 = calcularPercentual(faixa1);
 
-    function calcularPercentual(numeroPessoasDaFaixa) {
-        let totalPessoas = 10;
-        return (numeroPessoasDaFaixa / totalPessoas) * 100;
-    }
+    let percentualFaixa5 = calcularPercentual(faixa5);
 
-    function mostrarResultado(faixa1, faixa2, faixa3, faixa4, faixa5, percentualFaixa1, percentualFaixa5) {
+    mostrarResultado(faixa1, faixa2, faixa3, faixa4, faixa5, percentualFaixa1, percentualFaixa5);
 
-        let resumoResultado =
-            `
+}
+
+function calcularPercentual(numeroPessoasDaFaixa) {
+    let totalPessoas = 10;
+    return (numeroPessoasDaFaixa / totalPessoas) * 100;
+}
+
+function mostrarResultado(faixa1, faixa2, faixa3, faixa4, faixa5, percentualFaixa1, percentualFaixa5) {
+
+    let resumoResultado =
+        `
         Quantidade
         Até 15 anos:  ${faixa1};
         De 16 a 30 anos:  ${faixa2};
@@ -59,7 +58,7 @@ function calcularfaixaEtariaDeIdade() {
         Até 15 anos: ${percentualFaixa1.toFixed(2)}%;
         Acima de 61 anos: ${percentualFaixa5.toFixed(2)}%;
     `
-        window.alert(resumoResultado);
-    }
+    window.alert(resumoResultado);
 }
+
 
