@@ -3,7 +3,7 @@
   
 
 function verificarTurno() {
-    var turno = document.getElementById("turno").value;
+    let turno = document.getElementById("turno").value;
     turno = turno.toUpperCase();
   
    
