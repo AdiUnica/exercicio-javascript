@@ -75,3 +75,9 @@ function mostrarResultado(nota1, nota2, media, conceito, resultado) {
     `
     window.alert(resumoResultado);
 }
+
+module.exports = {
+    calcularMedia : calcularMedia,
+    calcularResultado: calcularResultado,
+    calcularConceito: calcularConceito,
+};

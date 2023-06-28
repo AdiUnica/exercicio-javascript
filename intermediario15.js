@@ -34,4 +34,7 @@ function mostrarResultado(resultado) {
     window.alert(resumoResultado);
 }
 
+module.exports = {
+    verificarTriangulo: verificarTriangulo
+};
 
