@@ -14,14 +14,17 @@ function verificarTurno(turno) {
     
     if (turno === "M") {
       return "Bom dia!";
-    } else if (turno === "V") {
-        return"Boa tarde!";
-    } else if (turno === "N") {  
-        return"Boa noite!";
-    } else {
-        return"Valor inválido!";
     }
+    if (turno === "V") {
+        return"Boa tarde!";
+    }
+    if (turno === "N") {  
+        return"Boa noite!";
+    }
+     
+    return"Valor inválido!";   
 }
+
 module.exports = {
     verificarTurno: verificarTurno, 
 };

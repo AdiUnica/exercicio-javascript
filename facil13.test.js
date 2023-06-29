@@ -1,4 +1,4 @@
-const dia = require('./facil13');
+const dia = require("./facil13");
 
 
 test("Teste dia da semana 1 ", () => {

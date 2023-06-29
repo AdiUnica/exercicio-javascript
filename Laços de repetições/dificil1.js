@@ -1,33 +1,29 @@
-/*  Faça um programa que receba um número e usando laços de repetição calcule e mostre a tabuada desse número. */
+/*  Faça um programa que receba um número e usando laços de repetição calcule
+ e mostre a tabuada desse número. */
 
-
-function calcularTabuada() {
+ function mostrarTabuada() {
     let numero = parseInt(document.getElementById("numero").value);
-
-    for (let i = 1; i < 11; i++) {
-        document.write(numero + " X " + i + " = " + (numero * i) +"<br>");
-        
-    }
-    
+    let tabuada = calcularTabuada(numero);
+ 
+     window.alert(tabuada);
+ }
+ function calcularTabuada(numero) {
     let resultado = '';
 
     for (let i = 1; i < 11; i++) {
-        resultado += numero + " X " + i + " = " + (numero * i) +"\n";
+        resultado += numero + " X " + i + " = " + (numero * i) + "\n";
     }
-    window.alert(resultado);
+
+    return resultado;
 }
 
 
+module.exports = {
+    calcularTabuada: calcularTabuada,
+  };
 
 
 
 
-/* function calcularTabuada() {
-    var numero = parseInt(document.getElementById("numero").value);
 
-    let i = 1
-    while ( i < 11) {
-        document.write(numero + " X " + i + " = " + (numero * i) +"<br>");
-        i++;
-    }
-    */
+

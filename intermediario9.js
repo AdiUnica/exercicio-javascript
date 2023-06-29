@@ -1,6 +1,5 @@
 /*  Faça um programa que leia três números e mostre-os em ordem decrescente. */
 
-
 function mostrarOrdemDecrescente() {
 
   let numero1 = parseInt(document.getElementById("numero1").value);
@@ -9,8 +8,8 @@ function mostrarOrdemDecrescente() {
   
   let numerosOrdenados = ordernarDecrescente(numero1, numero2, numero3);
 
-  console.log(numerosOrdenados);
   window.alert(numerosOrdenados);
+ 
 }
 
 function ordernarDecrescente(numero1, numero2, numero3) {
@@ -23,3 +22,8 @@ function ordernarDecrescente(numero1, numero2, numero3) {
 
   return numeros.join(", ");
 }
+
+module.exports = {
+  ordernarDecrescente: ordernarDecrescente
+};
+ 
